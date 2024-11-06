@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazioni Spooky</title>
+    <script>
+        // Funzione per scegliere la fazione casualmente
+        function getRandomFazione() {
+            const fazioni = [
+                "Sei della fazione strega",
+                "Sei della fazione vampiro",
+                "Sei della fazione lupo"
+            ];
+            const randomIndex = Math.floor(Math.random() * fazioni.length);
+            return fazioni[randomIndex];
+        }
+
+        // Quando la pagina è pronta, mostra un messaggio casuale
+        window.onload = function() {
+            const messaggio = getRandomFazione();
+            document.getElementById("messaggio").innerText = messaggio;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="messaggio"></h1>
+</body>
+</html>
