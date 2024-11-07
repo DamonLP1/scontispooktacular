@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sconti Spooktacular</title>
+    <title>Fazioni Spooky</title>
     <script>
-        // Funzione per scegliere la sconto casualmente
+        // Funzione per scegliere la fazione casualmente
         function getRandomFazione() {
             const fazioni = [
                 "Hai ricevuto uno sconto del 10%",
                 "Hai ricevuto uno sconto del 30%",
-                "Hai ricevuto uno sconto del 70%!!"
+                "Hai ricevuto uno sconto del 90%"
             ];
             const randomIndex = Math.floor(Math.random() * fazioni.length);
             return fazioni[randomIndex];
@@ -22,8 +22,37 @@
             document.getElementById("messaggio").innerText = messaggio;
         }
     </script>
+    <style>
+    h1{
+        font-size: 50px;
+            display: flex;
+            flex-direction: column;
+            color: white; 
+            align-items: center;   
+            height: 100vh;      
+            justify-content: center;
+            width: 50%;
+            margin: 50px auto; 
+            padding: 20px; 
+            z-index: 10;
+    }
+    img.Coriandolo1{
+         position: absolute;
+          top: -30%;
+          left: 50%
+    }
+    img.Coriandolo2{
+        position: absolute;
+            top: -30%;      /* Distanza dal bordo superiore */
+            right: 50%;
+            width: auto;
+            height: auto;   /* Mantieni le proporzioni dell'immagine */
+    }
+    </style>
 </head>
-<body>
+<body style="background-color: darkorange;">
     <h1 id="messaggio"></h1>
+    <img src="images/—Pngtree—transparent background isolated with many_5655638.png" class="Coriandolo1">
+    <img src="images/—Pngtree—transparent background isolated with many_5655638.png" class="Coriandolo2">
 </body>
 </html>
